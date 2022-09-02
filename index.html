@@ -5,22 +5,58 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./static/bootstrap/css/bootstrap.css" />
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./static/css/style.css" />
     <title>Links Artigos Tech</title>
   </head>
 
   <body>
-    <footer id="footer">
-      <div class="container">
-        <div class="row">
-          <div class="col-md-12 text-center footer-links">
-            <a href="https://vanderleimiguel.herokuapp.com/"
-              >&copy; Copyright <strong>Vanderlei Miguel</strong></a
-            >
+    <main>
+      <section class="section-bg mt-5" id="links">
+        <div class="container pb-5 pt-5">
+          <button
+            type="button"
+            class="btn btn-primary btn-lg d-flex justify-content-center"
+          >
+            Criar
+          </button>
+          <h2 class="pb-4 d-flex justify-content-center">
+            Links de Artigos Tecnologia
+          </h2>
+
+          <div
+            class="row row-cols-1 row-cols-md-3 g-4 shadow border-"
+            id="cards"
+          >
+            <!-- <div class="col">
+              <div class="card">
+                <div class="card-body">
+                  <h5 class="card-title d-flex justify-content-center">
+                    Pintura em Tela
+                  </h5>
+                  <p class="card-text">
+                    This is a longer card with supporting text below as a
+                    natural lead-in to additional content. This content is a
+                    little bit longer.
+                  </p>
+                </div>
+              </div>
+            </div> -->
           </div>
         </div>
-      </div>
-    </footer>
-    <script src="./assets/js/script.js"></script>
+      </section>
+
+      <footer id="footer">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-12 text-center footer-links">
+              <a href="https://vanderleimiguel.herokuapp.com/"
+                >&copy; Copyright <strong>Vanderlei Miguel</strong></a
+              >
+            </div>
+          </div>
+        </div>
+      </footer>
+    </main>
+    <script src="./static/js/script.js"></script>
   </body>
 </html>
