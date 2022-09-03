@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./static/bootstrap/css/bootstrap.css" />
     <link rel="stylesheet" href="./static/css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Links Artigos Tech</title>
   </head>
 
@@ -13,12 +14,6 @@
     <main>
       <section class="section-bg mt-5" id="links">
         <div class="container pb-5 pt-5">
-          <button
-            type="button"
-            class="btn btn-primary btn-lg d-flex justify-content-center"
-          >
-            Criar
-          </button>
           <h2 class="pb-4 d-flex justify-content-center">
             Links de Artigos Tecnologia
           </h2>
@@ -26,25 +21,56 @@
           <div
             class="row row-cols-1 row-cols-md-3 g-4 shadow border-"
             id="cards"
-          >
-            <!-- <div class="col">
-              <div class="card">
-                <div class="card-body">
-                  <h5 class="card-title d-flex justify-content-center">
-                    Pintura em Tela
-                  </h5>
-                  <p class="card-text">
-                    This is a longer card with supporting text below as a
-                    natural lead-in to additional content. This content is a
-                    little bit longer.
-                  </p>
-                </div>
-              </div>
-            </div> -->
-          </div>
+          ></div>
         </div>
       </section>
 
+      <section class="container">
+        <div class="row">
+          
+          <div class="col-md-4">
+            <form id="create">
+              <div class="mb-3">
+                <input type="text" class="form-control" id="formCreateTitle" placeholder="Insira um titulo" />
+              </div>
+              <div class="mb-3">
+                <input type="text" class="form-control" id="formCreateUrl" placeholder="Insira uma URL"/>
+              </div>
+            </form>
+            <button class="btn btn-success" id="btn-create">Criar</button>
+          </div>
+        
+        <div class="col-md-4">
+          <form id="update">
+            <div class="mb-3">
+              
+              <input type="text" class="form-control" id="formUpdateId" placeholder="Insira o Id"/>
+            </div>
+            <div class="mb-3">
+              
+              <input type="text" class="form-control" id="formUpdateTitle" placeholder="Insira o Titulo"/>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="formUpdateUrl" placeholder="Insira a URL"/>
+            </div>
+          </form>
+          <button class="btn btn-success" id="btn-update">Atualizar</button>
+        </div>
+
+        <div class="col-md-4">
+          <form id="delete">
+            <div class="mb-3">
+              <input type="text" class="form-control" id="formDeleteId" placeholder="Insira o ID" />
+            </div>
+            
+          </form>
+          <button class="btn btn-success" id="btn-delete">Deletar</button>
+        </div>
+      </div>
+      </div>
+      </section>
+
+     
       <footer id="footer">
         <div class="container">
           <div class="row">
