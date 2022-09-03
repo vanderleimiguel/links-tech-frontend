@@ -56,9 +56,9 @@ function getAllLinks() {
                 <div class="card">
                   <div class="card-body">
                   
-                      <h5 class="card-title d-flex justify-content-center">${title}</h5>
+                      <h4 class="card-title d-flex justify-content-center">${title}</h4>
                       <p class="card-text d-flex justify-content-center">
-                        <a href=${url}>Link</a
+                        <a class="text-decoration-none" href=${url}>Link</a
                       </p>
                       <h6 class="card-title d-flex justify-content-center">ID: ${id}</h6>
 
