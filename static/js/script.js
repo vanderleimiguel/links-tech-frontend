@@ -54,14 +54,11 @@ function getAllLinks() {
           `
               <div class="col">
                 <div class="card">
-                  <div class="card-body">
-                  
-                      <h4 class="card-title d-flex justify-content-center">${title}</h4>
-                      <p class="card-text d-flex justify-content-center">
-                        <a class="text-decoration-none" target="_blank" href=${url}>Link</a
-                      </p>
-                      <h6 class="card-title d-flex justify-content-center">ID: ${id}</h6>
-
+                  <div class="card-body" >
+                    <a class="text-decoration-none text-dark" target="_blank" href=${url}>
+                      <h4 class="card-title d-flex justify-content-center text-dark">${title}</h4>
+                    </a
+                      <h6 class="card-title">ID: ${id}</h6>
                   </div>
                 </div>
               </div>
