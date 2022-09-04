@@ -5,9 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./static/bootstrap/css/bootstrap.css" />
-    <link rel="stylesheet" href="./static/css/style.css" />
     <link rel="icon" type="image/svg" href="./static/images/link.svg" />
-
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <title>Links Artigos Tech</title>
   </head>
@@ -29,57 +27,79 @@
 
       <section class="container bg-dark">
         <div class="row">
-          
           <div class="col-md-4">
             <form id="create">
               <div class="mb-3">
                 <h3 class="text-center text-light">Criar Novo Link</h3>
-                <input type="text" class="form-control" id="formCreateTitle" placeholder="Insira um titulo" />
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Insira um titulo"
+                />
               </div>
               <div class="mb-3">
-                <input type="text" class="form-control" id="formCreateUrl" placeholder="Insira uma URL"/>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Insira uma URL"
+                />
               </div>
             </form>
             <button class="btn btn-success" id="btn-create">Criar</button>
           </div>
-        
-        <div class="col-md-4">
-          <form id="update">
-            <div class="mb-3 ">
-              <h3 class="text-center text-light">Atualizar Link por Id</h3>
-              <input type="text" class="form-control" id="formUpdateId" placeholder="Insira o Id"/>
-            </div>
-            <div class="mb-3">
-              
-              <input type="text" class="form-control" id="formUpdateTitle" placeholder="Insira o Titulo"/>
-            </div>
-            <div class="mb-3">
-              <input type="text" class="form-control" id="formUpdateUrl" placeholder="Insira a URL"/>
-            </div>
-          </form>
-          <button class="btn btn-success" id="btn-update">Atualizar</button>
-        </div>
 
-        <div class="col-md-4 ">
-          <form id="delete">
-            <div class="mb-3">
-              <h3 class="text-center text-light">Deletar Link por Id</h3>
-              <input type="text" class="form-control" id="formDeleteId" placeholder="Insira o ID" />
-            </div>
-            
-          </form>
-          <button class="btn btn-success" id="btn-delete">Deletar</button>
+          <div class="col-md-4">
+            <form id="update">
+              <div class="mb-3">
+                <h3 class="text-center text-light">Atualizar Link por Id</h3>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Insira o Id"
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Insira o Titulo"
+                />
+              </div>
+              <div class="mb-3">
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Insira a URL"
+                />
+              </div>
+            </form>
+            <button class="btn btn-success" id="btn-update">Atualizar</button>
+          </div>
+
+          <div class="col-md-4">
+            <form id="delete">
+              <div class="mb-3">
+                <h3 class="text-center text-light">Deletar Link por Id</h3>
+                <input
+                  type="text"
+                  class="form-control"
+                  placeholder="Insira o ID"
+                />
+              </div>
+            </form>
+            <button class="btn btn-success" id="btn-delete">Deletar</button>
+          </div>
         </div>
-      </div>
-      </div>
       </section>
 
-     
       <footer id="footer">
         <div class="container">
           <div class="row">
             <div class="col-md-12 pt-5 text-center">
-              <a class="text-decoration-none text-light" target="_blank" href="https://vanderleimiguel.herokuapp.com/"
+              <a
+                class="text-decoration-none text-light"
+                target="_blank"
+                href="https://vanderleimiguel.herokuapp.com/"
                 >&copy; Copyright <strong>Vanderlei Miguel</strong></a
               >
             </div>

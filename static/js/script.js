@@ -51,18 +51,16 @@ function getAllLinks() {
         let url = data[i].url
         document.querySelector('#cards').insertAdjacentHTML(
           'beforeend',
-          `
-              <div class="col">
-                <div class="card">
-                  <div class="card-body" >
-                    <a class="text-decoration-none text-dark" target="_blank" href=${url}>
-                      <h4 class="card-title d-flex justify-content-center text-dark">${title}</h4>
-                    </a
-                      <h6 class="card-title">ID: ${id}</h6>
-                  </div>
+          `<div class="col">
+              <div class="card">
+                <div class="card-body" >
+                  <a class="text-decoration-none text-dark" target="_blank" href=${url}>
+                  <h4 class="card-title d-flex justify-content-center text-dark">${title}</h4>
+                  </a
+                  <h6 class="card-title">ID: ${id}</h6>
                 </div>
               </div>
-              `
+            </div>`
         )
       }
     })
@@ -88,7 +86,6 @@ function updateLink(linkUpdate, id) {
 }
 
 function deleteLink(id) {
-  console.log('delete entrou')
   axios
     .delete(`${urlApi}/delete/${id}`)
     .then(response => {
