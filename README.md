@@ -17,7 +17,7 @@ https://api-links-tech.herokuapp.com/doc
 
 ## Repositorio Frontend
 
-https://api-links-tech.herokuapp.com/doc
+https://github.com/vanderleimiguel/links-tech-frontend
 
 # Código
 
