@@ -4,20 +4,31 @@ getAllLinks()
 
 // Button create
 document.querySelector('#btn-create').addEventListener('click', () => {
+  let testFormCreate = 0
   let formCreateTitle = document.forms[0].elements[0].value
   let formCreateUrl = document.forms[0].elements[1].value
-  const newLink = {
-    title: formCreateTitle,
-    url: formCreateUrl
+
+  if (formCreateTitle == '' || formCreateUrl == '') {
+    testFormCreate = 1
+    alert('Preencha os campos Titulo e Url')
   }
-  createLink(newLink)
-  setTimeout(function () {
-    location.reload()
-  }, 1000)
+
+  if (testFormCreate == 0) {
+    const newLink = {
+      title: formCreateTitle,
+      url: formCreateUrl
+    }
+
+    createLink(newLink)
+    setTimeout(function () {
+      location.reload()
+    }, 1000)
+  }
 })
 
 //button Update
 function btnUpdate() {
+  let testFormUpdate = 0
   const buttonsUpdate = document.querySelectorAll('#btn-update')
   for (let buttonUpdate of buttonsUpdate) {
     buttonUpdate.addEventListener('click', () => {
@@ -31,15 +42,23 @@ function btnUpdate() {
 
       let formUpdateTitle = document.forms[0].elements[0].value
       let formUpdateUrl = document.forms[0].elements[1].value
-      const linkUpdate = {
-        title: formUpdateTitle,
-        url: formUpdateUrl
+
+      if (formUpdateTitle == '' || formUpdateUrl == '') {
+        testFormUpdate = 1
+        alert('Preencha os campos Titulo e Url')
       }
 
-      updateLink(linkUpdate, updateId)
-      setTimeout(function () {
-        location.reload()
-      }, 1000)
+      if (testFormUpdate == 0) {
+        const linkUpdate = {
+          title: formUpdateTitle,
+          url: formUpdateUrl
+        }
+
+        updateLink(linkUpdate, updateId)
+        setTimeout(function () {
+          location.reload()
+        }, 1000)
+      }
     })
   }
 }
