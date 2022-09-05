@@ -16,29 +16,51 @@ document.querySelector('#btn-create').addEventListener('click', () => {
   }, 1000)
 })
 
-// Button update
-document.querySelector('#btn-update').addEventListener('click', () => {
-  let formUpdateId = document.forms[1].elements[0].value
-  let formUpdateTitle = document.forms[1].elements[1].value
-  let formUpdateUrl = document.forms[1].elements[2].value
-  const linkUpdate = {
-    title: formUpdateTitle,
-    url: formUpdateUrl
-  }
-  updateLink(linkUpdate, formUpdateId)
-  setTimeout(function () {
-    location.reload()
-  }, 1000)
-})
+//button Update
+function btnUpdate() {
+  const buttonsUpdate = document.querySelectorAll('#btn-update')
+  for (let buttonUpdate of buttonsUpdate) {
+    buttonUpdate.addEventListener('click', () => {
+      const textUpdate = buttonUpdate.parentElement.innerText.split('ID: ')
+      const text2Update = textUpdate[1]
+        .replace('Deletar', '')
+        .replace('Atualizar', '')
+        .trim()
+      const updateId = text2Update
 
-// Button delete
-document.querySelector('#btn-delete').addEventListener('click', () => {
-  let formDeleteId = document.forms[2].elements[0].value
-  deleteLink(formDeleteId)
-  setTimeout(function () {
-    location.reload()
-  }, 1000)
-})
+      let formUpdateTitle = document.forms[0].elements[0].value
+      let formUpdateUrl = document.forms[0].elements[1].value
+      const linkUpdate = {
+        title: formUpdateTitle,
+        url: formUpdateUrl
+      }
+
+      updateLink(linkUpdate, updateId)
+      setTimeout(function () {
+        location.reload()
+      }, 1000)
+    })
+  }
+}
+
+//Button Delete
+function btnDelete() {
+  const buttonsDelete = document.querySelectorAll('#btn-delete')
+  for (let buttonDelete of buttonsDelete) {
+    buttonDelete.addEventListener('click', () => {
+      const textDelete = buttonDelete.parentNode.innerText.split('ID: ')
+      const text2Delete = textDelete[1]
+        .replace('Deletar', '')
+        .replace('Atualizar', '')
+        .trim()
+      const deleteId = text2Delete
+      deleteLink(deleteId)
+      setTimeout(function () {
+        location.reload()
+      }, 1000)
+    })
+  }
+}
 
 function getAllLinks() {
   axios
@@ -57,7 +79,13 @@ function getAllLinks() {
                   <a class="text-decoration-none text-dark" target="_blank" href=${url}>
                   <h4 class="card-title d-flex justify-content-center text-dark">${title}</h4>
                   </a
-                  <h6 class="card-title">ID: ${id}</h6>
+                  <div class="row">
+                    <div class="col-md-12 pt-2 text-center">
+                    <p class="card-title">ID: ${id}</p>
+                      <button onclick="btnUpdate()" class="btn btn-success" id="btn-update">Atualizar</button>
+                      <button onclick="btnDelete()" class="btn btn-success" id="btn-delete">Deletar</button>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>`
