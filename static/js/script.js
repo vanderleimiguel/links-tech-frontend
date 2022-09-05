@@ -46,9 +46,11 @@ function btnUpdate() {
 
 //Button Delete
 function btnDelete() {
+  console.log('1clique')
   const buttonsDelete = document.querySelectorAll('#btn-delete')
   for (let buttonDelete of buttonsDelete) {
     buttonDelete.addEventListener('click', () => {
+      console.log('2clique')
       const textDelete = buttonDelete.parentNode.innerText.split('ID: ')
       const text2Delete = textDelete[1]
         .replace('Visitar', '')

@@ -21,16 +21,14 @@ https://github.com/vanderleimiguel/links-tech-frontend
 
 # Código
 
-Ao abrir a pagina irá carregar todos seus links ja salvos, na parte inferior existe 3 formularios:
+Ao abrir a pagina irá carregar todos seus links ja salvos, na parte inferior existe 1 formulario para inserir dados
+abaixo descritivo de funcionamento da pagina:
 
-Criar Link:
-No primeiro formularios voce coloca o titulo e url do link que deseja salvar e clica no botão Criar
+Novo Link: Insira os dados do link no formulario ao lado e clique no botão verde "Criar Novo Link"
 
-Atualizar Link por ID
-No segundo formulario voce coloca o ID do link que deseja atualizar, o titulo e a url do link e clica no botão atualizar
+Atualizar Link: Insira os dados a serem atualizados nno formulario ao lado e clique no botão azul do artigo a ser atualizado "Atualizar"
 
-Deletar Link por ID
-No terceiro formulario voce coloca o ID do link que deseja deletar e clica no botão deletar
+Deletar Link: Clique no botão vermelho "Deletar" do artigo a ser excluido
 
 # Desenvolvimento
 
