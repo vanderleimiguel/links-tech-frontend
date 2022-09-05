@@ -82,8 +82,8 @@ function getAllLinks() {
                   <div class="row">
                     <div class="col-md-12 pt-2 text-center">
                     <p class="card-title">ID: ${id}</p>
-                      <button onclick="btnUpdate()" class="btn btn-success" id="btn-update">Atualizar</button>
-                      <button onclick="btnDelete()" class="btn btn-success" id="btn-delete">Deletar</button>
+                      <button onclick="btnUpdate()" class="btn btn-primary" id="btn-update">Atualizar</button>
+                      <button onclick="btnDelete()" class="btn btn-danger" id="btn-delete">Deletar</button>
                     </div>
                   </div>
                 </div>
