@@ -23,6 +23,7 @@ function btnUpdate() {
     buttonUpdate.addEventListener('click', () => {
       const textUpdate = buttonUpdate.parentElement.innerText.split('ID: ')
       const text2Update = textUpdate[1]
+        .replace('Visitar', '')
         .replace('Deletar', '')
         .replace('Atualizar', '')
         .trim()
@@ -50,6 +51,7 @@ function btnDelete() {
     buttonDelete.addEventListener('click', () => {
       const textDelete = buttonDelete.parentNode.innerText.split('ID: ')
       const text2Delete = textDelete[1]
+        .replace('Visitar', '')
         .replace('Deletar', '')
         .replace('Atualizar', '')
         .trim()
@@ -81,7 +83,8 @@ function getAllLinks() {
                   </a
                   <div class="row">
                     <div class="col-md-12 pt-2 text-center">
-                    <p class="card-title">ID: ${id}</p>
+                      <p class="card-title">ID: ${id}</p>
+                      <a class="btn btn-secondary" target="_blank" href=${url}>Visitar</a>
                       <button onclick="btnUpdate()" class="btn btn-primary" id="btn-update">Atualizar</button>
                       <button onclick="btnDelete()" class="btn btn-danger" id="btn-delete">Deletar</button>
                     </div>
