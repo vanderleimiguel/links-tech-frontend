@@ -1,5 +1,4 @@
 const urlApi = 'https://api-links-tech.herokuapp.com/links'
-console.log(titles)
 
 getAllLinks()
 
