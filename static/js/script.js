@@ -27,62 +27,35 @@ document.querySelector('#btn-create').addEventListener('click', () => {
 })
 
 //button Update
-function btnUpdate() {
+function btnUpdate(id) {
   let testFormUpdate = 0
-  const buttonsUpdate = document.querySelectorAll('#btn-update')
-  for (let buttonUpdate of buttonsUpdate) {
-    buttonUpdate.addEventListener('click', () => {
-      const textUpdate = buttonUpdate.parentElement.innerText.split('ID: ')
-      const text2Update = textUpdate[1]
-        .replace('Visitar', '')
-        .replace('Deletar', '')
-        .replace('Atualizar', '')
-        .trim()
-      const updateId = text2Update
+  let formUpdateTitle = document.forms[0].elements[0].value
+  let formUpdateUrl = document.forms[0].elements[1].value
 
-      let formUpdateTitle = document.forms[0].elements[0].value
-      let formUpdateUrl = document.forms[0].elements[1].value
+  if (formUpdateTitle == '' || formUpdateUrl == '') {
+    testFormUpdate = 1
+    alert('Preencha os campos Titulo e Url')
+  }
 
-      if (formUpdateTitle == '' || formUpdateUrl == '') {
-        testFormUpdate = 1
-        alert('Preencha os campos Titulo e Url')
-      }
+  if (testFormUpdate == 0) {
+    const linkUpdate = {
+      title: formUpdateTitle,
+      url: formUpdateUrl
+    }
 
-      if (testFormUpdate == 0) {
-        const linkUpdate = {
-          title: formUpdateTitle,
-          url: formUpdateUrl
-        }
-
-        updateLink(linkUpdate, updateId)
-        setTimeout(function () {
-          location.reload()
-        }, 1000)
-      }
-    })
+    updateLink(linkUpdate, id)
+    setTimeout(function () {
+      location.reload()
+    }, 1000)
   }
 }
 
 //Button Delete
-function btnDelete() {
-  console.log('1clique')
-  const buttonsDelete = document.querySelectorAll('#btn-delete')
-  for (let buttonDelete of buttonsDelete) {
-    buttonDelete.addEventListener('click', () => {
-      console.log('2clique')
-      const textDelete = buttonDelete.parentNode.innerText.split('ID: ')
-      const text2Delete = textDelete[1]
-        .replace('Visitar', '')
-        .replace('Deletar', '')
-        .replace('Atualizar', '')
-        .trim()
-      const deleteId = text2Delete
-      deleteLink(deleteId)
-      setTimeout(function () {
-        location.reload()
-      }, 1000)
-    })
-  }
+function btnDelete(id) {
+  deleteLink(id)
+  setTimeout(function () {
+    location.reload()
+  }, 1000)
 }
 
 function getAllLinks() {
@@ -99,15 +72,12 @@ function getAllLinks() {
           `<div class="col">
               <div class="card">
                 <div class="card-body" >
-                  <a class="text-decoration-none text-dark" target="_blank" href=${url}>
                   <h4 class="card-title d-flex justify-content-center text-dark">${title}</h4>
-                  </a
                   <div class="row">
                     <div class="col-md-12 pt-2 text-center">
-                      <p class="card-title">ID: ${id}</p>
                       <a class="btn btn-secondary" target="_blank" href=${url}>Visitar</a>
-                      <button onclick="btnUpdate()" class="btn btn-primary" id="btn-update">Atualizar</button>
-                      <button onclick="btnDelete()" class="btn btn-danger" id="btn-delete">Deletar</button>
+                      <button onclick="btnUpdate(id)" class="btn btn-primary" id="${id}">Atualizar</button>
+                      <button onclick="btnDelete(id)" class="btn btn-danger" id="${id}">Deletar</button>
                     </div>
                   </div>
                 </div>
