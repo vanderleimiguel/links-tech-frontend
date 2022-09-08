@@ -1,7 +1,7 @@
 # links-tech-frontend
 
 Links Tech é uma pagina que permite salvar seus links favoritos, com o titulo
-Nesta pagina foi utilizado deploy do frontend no vercel, foi utilizado o banco de dados Mongo DB Atlas e efetuado o deploy do backend no Heroku
+Nesta pagina foi utilizado deploy do frontend no vercel, foi utilizado o banco de dados Mongo DB Atlas e efetuado o deploy do backend no Heroku.
 
 ## Deploy Frontend
 
